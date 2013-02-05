@@ -1,0 +1,12 @@
+C:\Users\Matt\Documents\Visual Studio 2012\Projects\Canvas\Canvas\bin\Release\Canvas.exe.config
+C:\Users\Matt\Documents\Visual Studio 2012\Projects\Canvas\Canvas\bin\Release\Canvas.exe
+C:\Users\Matt\Documents\Visual Studio 2012\Projects\Canvas\Canvas\bin\Release\Canvas.pdb
+C:\Users\Matt\Documents\Visual Studio 2012\Projects\Canvas\Canvas\bin\Release\Newtonsoft.Json.dll
+C:\Users\Matt\Documents\Visual Studio 2012\Projects\Canvas\Canvas\bin\Release\Newtonsoft.Json.xml
+C:\Users\Matt\Documents\Visual Studio 2012\Projects\Canvas\Canvas\obj\Release\Canvas.AccessTokenEntryWindow.resources
+C:\Users\Matt\Documents\Visual Studio 2012\Projects\Canvas\Canvas\obj\Release\Canvas.MainWindow.resources
+C:\Users\Matt\Documents\Visual Studio 2012\Projects\Canvas\Canvas\obj\Release\Canvas.Properties.Resources.resources
+C:\Users\Matt\Documents\Visual Studio 2012\Projects\Canvas\Canvas\obj\Release\Canvas.csproj.GenerateResource.Cache
+C:\Users\Matt\Documents\Visual Studio 2012\Projects\Canvas\Canvas\obj\Release\Canvas.exe
+C:\Users\Matt\Documents\Visual Studio 2012\Projects\Canvas\Canvas\obj\Release\Canvas.pdb
+C:\Users\Matt\Documents\Visual Studio 2012\Projects\Canvas\Canvas\obj\Release\Canvas.csprojResolveAssemblyReference.cache

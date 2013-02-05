@@ -59,7 +59,7 @@ namespace Canvas
                             (string)user["name"]);
         }
 
-        async public Task<User[]> GetInstructors(string course_id)
+        public User[] GetInstructors(string course_id)
         {
             HttpRequestMessage req = new HttpRequestMessage(HttpMethod.Get,
                 String.Format(Properties.Resources.API_LIST_USERS_TEACHER, course_id));
@@ -76,7 +76,7 @@ namespace Canvas
         }
 
         // Get the modules available for this course
-        async public Task<Module[]> GetModules(string course_id)
+        public Module[] GetModules(string course_id)
         {
             HttpRequestMessage req = new HttpRequestMessage(HttpMethod.Get,
                 String.Format(Properties.Resources.API_LIST_MODULES, course_id));
@@ -95,7 +95,7 @@ namespace Canvas
         }
 
         // Get the assignments available for this course
-        async public Task<Assignment[]> GetAssignments(string course_id)
+        public Assignment[] GetAssignments(string course_id)
         {
             HttpRequestMessage req = new HttpRequestMessage(HttpMethod.Get,
                 String.Format(Properties.Resources.API_LIST_ASSIGNMENTS, course_id));
@@ -117,12 +117,11 @@ namespace Canvas
         }
 
         // Get the students in a course
-        async public Task<User[]> GetStudents(string course_id, int current_page)
+        public User[] GetStudents(string course_id, int current_page)
         {
             HttpRequestMessage req = new HttpRequestMessage(HttpMethod.Get,
                 String.Format(Properties.Resources.API_LIST_USERS_STUDENT, 
-                                        course_id,
-                                        current_page));
+                                        course_id));
             HttpResponseMessage resp = client.SendAsync(req).Result;
             JArray users = JArray.Parse(resp.Content.ReadAsStringAsync().Result);
 

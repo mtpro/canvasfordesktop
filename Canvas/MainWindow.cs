@@ -108,6 +108,7 @@ namespace Canvas
             
             // Update Instructors label and Show it
             string InstructorsStr= "Instructors: ";
+            instructors = client.GetInstructors(activeCourse.Id());
             foreach (User instr in instructors)
             {
                 InstructorsStr += instr.Name();
@@ -117,6 +118,7 @@ namespace Canvas
 
             // Update Module Contents and Show it
             ModuleComboBox.Items.Clear();
+            modules = client.GetModules(activeCourse.Id());
             foreach (Module mod in modules)
             {
                 ModuleComboBox.Items.Add(mod.Name());
@@ -130,7 +132,7 @@ namespace Canvas
             // // //
 
             // Update Assignments information
-            
+            assignments = client.GetAssignments(activeCourse.Id());
             foreach (Assignment ass in assignments)
             {
                 AssignmentListBox.Items.Add(ass.Name());
@@ -149,6 +151,7 @@ namespace Canvas
                 ClassmatesPageComboBox.Items.Add("Page " + i);
             }
 
+            classmates = client.GetStudents(activeCourse.Id(), 0);
             foreach (User classmate in classmates)
             {
                 ClassmatesListBox.Items.Add(classmate.Sortable_Name());
@@ -213,7 +216,7 @@ namespace Canvas
         private void ClassmatesPageComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             currentStudentPage = 1 + ClassmatesPageComboBox.SelectedIndex;
-            classmates = client.GetStudents(activeCourse.Id(), currentStudentPage).Result;
+            classmates = client.GetStudents(activeCourse.Id(), currentStudentPage);
             ClassmatesListBox.Items.Clear();
             foreach (User classmate in classmates)
             {
@@ -221,16 +224,15 @@ namespace Canvas
             }
         }
 
-        async private void GetCourseInfo()
+        private void GetCourseInfo()
         {
-            Task<Module[]> ModuleTask = client.GetModules(activeCourse.Id());
-            Task<Assignment[]> AssignmentsTask = client.GetAssignments(activeCourse.Id());
-            modules = await ModuleTask;
-            assignments = await AssignmentsTask;
-            Task<User[]> InstructorsTask = client.GetInstructors(activeCourse.Id());
-            Task<User[]> ClassmatesTask = client.GetStudents(activeCourse.Id(), 0);
-            instructors = await InstructorsTask;
-            classmates = await ClassmatesTask;
+            
+            
+            
+
+            
+            
+            
             
         }
 
